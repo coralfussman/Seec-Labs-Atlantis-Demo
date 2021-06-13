@@ -4,6 +4,9 @@ import React from 'react';
 function Team(){
   return (
     <div id="team">
+        
+       
+     
             <div>
                 <h3>Coral Fussman</h3>
 
@@ -52,6 +55,7 @@ function Team(){
                         </a>
                 </div>
         </div>
+    
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react';
+import page_brk from '../assets/page_brk.svg'
 
 
 
-
-function App() {
+function About() {
   const text = `Atlantis is a light-weight library that leverages Redis
                 key-value store to dynamically cache GraphQL queries as responses. \n
                 Atlantis is able to dynamically store deeply-nested queries and maintain 
@@ -16,10 +16,11 @@ function App() {
     <div>
       <div>
         <h2>Atlantis - The App</h2>
+        <img src={page_brk} />
             <p>{text}</p>
       </div>
     </div>
   );
 }
 
-export default App;
+export default About;

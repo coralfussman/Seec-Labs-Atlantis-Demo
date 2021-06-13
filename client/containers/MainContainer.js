@@ -2,6 +2,8 @@ import React, { useState } from "react";
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import QueryField from "../components/QueryField";
 import TeamContainer from './TeamContainer';
+import About from './About';
+
 
 
 function MainContainer() {
@@ -11,10 +13,13 @@ function MainContainer() {
 
 
   return (
-    <div>
-      <About />
-      <QueryField />
-      <TeamContainer />
+    <div className="main-container">
+      <div >
+       
+        <About />
+        <QueryField className="queryField"/>
+        <TeamContainer />
+      </div>
     </div>
   );
 }

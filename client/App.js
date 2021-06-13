@@ -1,16 +1,20 @@
 import React from 'react';
 import MainContainer from './containers/MainContainer'
-
-
+import Navbar from './containers/Navbar';
+import TideHeader from './components/TideHeader';
+import styles from './scss/styles.scss';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <div>
-        <p>Atlantis - from react</p>
+        
+        <TideHeader/>
+        
       </div>
-      <div><MainContainer /></div>
+      <div className="columnCenterContainer"><MainContainer/></div>
     </div>
+
   );
 }
 

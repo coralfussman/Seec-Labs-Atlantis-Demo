@@ -1,7 +1,15 @@
+import React, { useState } from "react";
+import Speedometer from "./Speedometer.js"
+import persisted from "../assets/persisted.svg"
+import fast from "../assets/fast.svg"
 // input field that lets us query the route cache test.
 
-import React, { useState } from "react";
-import { RadialGauge } from "react-canvas-gauges";
+
+
+let start = 0;
+let end = 0;
+let dif = 0;
+
 
 const useInput = (init) => {
   const [value, setValue] = useState(init);
@@ -14,19 +22,12 @@ const useInput = (init) => {
   return [value, onChange];
 };
 
-
 function QueryField() {
   // const [query, setQuery] = useState(() => {});
   const [queryInput, setQueryInput] = useInput();
   const [responseTime, setResponseTime] = useState('Response Time');
   
-  let start = 0;
-  let end = 0;
-  let dif = 0;
-
-
-
-
+  
   function sendQuery(queryInput) {
       console.log('recieved this', queryInput)
       // start a timer
@@ -47,54 +48,18 @@ function QueryField() {
       fetch('/clearcache/');
   }
 
-  
   const queryField = (
 
     <div className="field">
       <p>Atlantis Query</p>
 
-      <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Make a Request to Cache your speed Gains</h2>
-      <RadialGauge
-        units="Milliseconds"
-        title="Speed"
-        value={50}
-        minValue={0}
-        maxValue={100}
-        majorTicks={[
-          "1200",
-          "1100",
-          "1000",
-          "900",
-          "800",
-          "600",
-          "400",
-          "300",
-          "200",
-          "100"
-        ]}
-        minorTicks={2}
-        data-highlights='[
-          { "from": 50, "to": 100, "color": "rgb(111, 235, 111,.25)" },
-          { "from": 100, "to": 150, "color": "rgb(76, 219, 76,.25)" },
-          { "from": 150, "to": 200, "color": "rgb(181, 219, 76, .25)" },
-          { "from": 200, "to": 220, "color": "rgba(0,0,255,.25)" }
-          { "from": 0, "to": 100, "color": "rgba(248, 28, 28, .15)" }
-        ]'
-      />
-      <canvas data-type="radial-gauge"
-        data-highlights='[
-          { "from": 50, "to": 100, "color": "rgb(111, 235, 111,.25)" },
-          { "from": 100, "to": 150, "color": "rgb(76, 219, 76,.25)" },
-          { "from": 150, "to": 200, "color": "rgb(181, 219, 76, .25)" },
-          { "from": 200, "to": 220, "color": "rgba(0,0,255,.25)" }
-          { "from": 0, "to": 100, "color": "rgba(248, 28, 28, .15)" }
-        ]'
-></canvas>
+      <div className="centerRow">
+   
+      
     </div>
       <div>
       <select 
+            className="input"
             id="queryInput"
             type="queryInput"
             placeholder="Enter Query"
@@ -116,25 +81,60 @@ function QueryField() {
             onChange={setQueryInput}
         ></input> */}
         <input
+            className="input"
             id="queryOutput"
             type="queryOutput"
             value={responseTime}
         ></input>
         <div>
           <button 
+            className="submitButton"
             id='runquery'
             onClick={() => {sendQuery(queryInput) }} > Run Query </button>
-          <button id='clearcache' onClick={()=> {clearCache(); setResponseTime('Response Time')} }>Clear Cache </button>
-          <button id='rest'> Reset </button>
+          <button className="submitButton" id='clearcache' onClick={()=> {clearCache(); setResponseTime('Response Time')} }>Clear Cache </button>
+          <button className="submitButton" id='rest'> Reset </button>
         </div>
       </div>
     </div>
   );
 
   return (
+    <>
+      <h2>Demo & Metrics</h2>
     <div className="queryField">
-      {queryField}
+      <div id="field">
+      <h4>Make a Request to Cache your speed Gains</h4>
+      <div id="window"></div>
+        {queryField}
+      </div>
+      <div id="speed">
+        <div id="meter">
+          <Speedometer/>
+          {/* <AccelDial id="dial3" value={this.state.agx} title="Acceleration X" /> */}
+
+
+        </div>
+        <div className="metricDash">
+              <div id="metric">
+              <h2> 0-100% </h2>
+              <img className="metric-logo" src={persisted} alt="persist"/>
+              <h5>200x speed </h5>
+            </div>
+            <div id="metric">
+              <h2> 0-100% </h2>
+              <img className="metric-logo" src={fast} alt="persist"/>
+              <h5>reduced server load  </h5>
+            </div>
+            <div id="metric">
+              <h2>0-100%  </h2>
+              <img className="metric-logo" src={persisted} alt="persist"/>
+              <h5>cache hit  </h5>
+            </div>
+        </div>
+      </div>
     </div>
+
+    </>
   );
 }
 

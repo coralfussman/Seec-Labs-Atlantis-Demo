@@ -1,1 +1,0 @@
-// log the response and the response time.

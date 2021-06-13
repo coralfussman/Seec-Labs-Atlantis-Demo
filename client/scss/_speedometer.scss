@@ -64,6 +64,11 @@ canvas {
     margin: 0%;
   }
 }
+#metric:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  box-shadow: -2px -6px 15px #fff, 2px 6px 15px rgba(0, 0, 0, 0.15);
+}
 
 #field {
   display: flex;

@@ -28,9 +28,6 @@ body {
 .metric-logo {
   margin: 2%;
   height: 75px;
-  h6 {
-    margin: 1%;
-  }
 }
 .startdiv {
   margin: 5%;
@@ -125,6 +122,11 @@ header {
 
   box-shadow: -2px -6px 15px #fff, 2px 6px 15px rgba(0, 0, 0, 0.15);
 }
+.submitButton:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  box-shadow: -2px -6px 15px #fff, 2px 6px 15px rgba(0, 0, 0, 0.15);
+}
 .dropShadow {
   padding-top: 0.3%;
   height: 5vh;
@@ -164,7 +166,7 @@ header {
   border: 0ch;
   background-color: #e8f0fe;
   color: #51463a;
-  color: rgb(129, 202, 178);
+  color: rgb(129, 200, 202);
 }
 
 label {

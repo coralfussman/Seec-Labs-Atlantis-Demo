@@ -123,8 +123,8 @@ header {
   box-shadow: -2px -6px 15px #fff, 2px 6px 15px rgba(0, 0, 0, 0.15);
 }
 .submitButton:hover {
-  transform: scale(1.2);
-  transition: all 0.5s;
+  transform: scale(1.1);
+  transition: all 0.4s;
   box-shadow: -2px -6px 15px #fff, 2px 6px 15px rgba(0, 0, 0, 0.15);
 }
 .dropShadow {
@@ -165,8 +165,7 @@ header {
   font-size: 18px;
   border: 0ch;
   background-color: #e8f0fe;
-  color: #51463a;
-  color: rgb(129, 200, 202);
+  color: $lightBlue;
 }
 
 label {

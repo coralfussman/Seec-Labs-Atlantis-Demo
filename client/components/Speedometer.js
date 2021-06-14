@@ -1,6 +1,7 @@
 import React from 'react'
 import { RadialGauge } from "react-canvas-gauges";
-function Speedometer() {
+
+function Speedometer({ responseTime, setResponseTime }) {
 
 
 
@@ -10,7 +11,7 @@ function Speedometer() {
                 <RadialGauge
                     units="Milliseconds"
                     title="Speed"
-                    value={50}
+                    value={0 || responseTime}
                     minValue={0}
                     maxValue={100}
                     majorTicks={[

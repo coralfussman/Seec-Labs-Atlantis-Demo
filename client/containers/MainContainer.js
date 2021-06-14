@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import QueryField from "../components/QueryField";
 import TeamContainer from './TeamContainer';
 import About from './About';
+import Tree from '../components/Tree';
+
 
 
 
@@ -17,6 +19,7 @@ function MainContainer() {
       <div >
        
         <About />
+        <Tree/>
         <QueryField className="queryField"/>
         <TeamContainer />
       </div>

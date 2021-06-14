@@ -13,10 +13,10 @@ const Navbar = () => {
   
         <ul className='nav-links'>
           <li>
-            <a href="https://www.npmjs.com/package/@quell/client" target='_blank'>MEDIUM</a>
+            <a href="https://www.npmjs.com/package/atlantis-cache" target='_blank'>MEDIUM</a>
           </li>
           <li>
-            <a href="https://www.npmjs.com/package/@quell/server" target='_blank'>NPM PACKAGE</a>
+            <a href="https://www.npmjs.com/package/atlantis-cache" target='_blank'>NPM PACKAGE</a>
           </li>
           <li>
             <a href='#field'>DEMO</a>

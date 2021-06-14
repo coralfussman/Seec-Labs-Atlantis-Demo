@@ -13,15 +13,27 @@ function MainContainer() {
 
   // const [query, setQuery] = useState(() => {});
   // const [queryInput, setQueryInput] = useState(() => '');
+  const ExpandTree = () => {
+    const [displayTree, setDisplayTree] = useState(true)
+    const onClick = () => setDisplayTree(!displayTree)
 
+    return (
+      <div>
+        <input type="submit" value="Arrow" onClick={onClick} />
+        { displayTree ? null :  <Tree /> }
+      </div>
+    )
+ 
+  }
 
+// else as button for now, arrow later
   return (
     <div className="main-container">
       <div >
        
         <About />
         <Arrow/>
-        <Tree/>
+        <ExpandTree />
         <QueryField className="queryField"/>
         <TeamContainer />
       </div>

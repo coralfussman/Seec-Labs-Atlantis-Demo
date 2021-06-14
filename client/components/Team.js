@@ -1,5 +1,6 @@
 import React from 'react';
-
+import GitHubLogo from '../assets/github.svg';
+import LinkedInLogo from '../assets/linkedin.svg';
 
 function Team(){
   return (
@@ -12,10 +13,12 @@ function Team(){
 
                     <div class="social-container">
                         <a href="https://github.com/coralfussman"
-                            className="github-social">
+                            className="github-social" target="_blank">
+                                <img id='logo-main' src={GitHubLogo} width="35"></img>
                         </a>
                         <a href="https://www.linkedin.com/in/coral-fussman-21721538/"
-                            className="linkedin-social">
+                            className="linkedin-social" target="_blank">
+                                <img id='logo-main' src={LinkedInLogo} width="35"></img>
                         </a>
                     </div>
             </div>
@@ -24,10 +27,12 @@ function Team(){
 
                     <div class="social-container">
                         <a href="https://github.com/settnaing199"
-                            className="github-social">
+                            className="github-social" target="_blank">
+                                <img id='logo-main' src={GitHubLogo} width="35"></img>
                         </a>
                         <a href="https://www.linkedin.com/in/sett-hein/"
-                            className="linkedin-social">
+                            className="linkedin-social" target="_blank">
+                                <img id='logo-main' src={LinkedInLogo} width="35"></img>
                         </a>
                     </div>
             </div>
@@ -36,10 +41,12 @@ function Team(){
 
                 <div class="social-container">
                         <a href="https://github.com/erik-matevosyan"
-                            className="github-social">
+                            className="github-social" target="_blank">
+                                <img id='logo-main' src={GitHubLogo} width="35"></img>
                         </a>
                         <a href="https://www.linkedin.com/in/erik-matevosyan/"
-                            className="linkedin-social">
+                            className="linkedin-social" target="_blank">
+                                <img id='logo-main' src={LinkedInLogo} width="35"></img>
                         </a>
                 </div>
         </div>
@@ -48,10 +55,12 @@ function Team(){
 
                 <div class="social-container">
                         <a href="https://github.com/erikjrogel"
-                            className="github-social">
+                            className="github-social" target="_blank">
+                                <img id='logo-main' src={GitHubLogo} width="35"></img>
                         </a>
                         <a href="https://www.linkedin.com/in/erikjrogel/"
-                         className="linkedin-social">
+                         className="linkedin-social" target="_blank">
+                             <img id='logo-main' src={LinkedInLogo} width="35"></img>
                         </a>
                 </div>
         </div>

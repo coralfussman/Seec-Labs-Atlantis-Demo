@@ -196,7 +196,7 @@ middleware.makeGQLrequest = (req, res, next) => {
   console.log('about to make GQL query of ', res.locals.querymade);
   graphql(schema, res.locals.querymade).then((response) => {
   res.locals.graphQLResponse = response.data;
-  console.log('graphQL responded with', response.data);
+  console.log('graphQL responded with', res.locals.graphQLResponse);
   if (!res.locals.ismutation) {
     const subscriptions = middleware.findAllTypes(response.data);
     console.log('subscribed to ', subscriptions);

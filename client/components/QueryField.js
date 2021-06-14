@@ -25,7 +25,7 @@ const useInput = (init) => {
 function QueryField() {
   // const [query, setQuery] = useState(() => {});
   const [queryInput, setQueryInput] = useInput();
-  const [responseTime, setResponseTime] = useState('Response Time');
+  const [responseTime, setResponseTime] = useState(0);
   
   
   function sendQuery(queryInput) {
@@ -63,7 +63,7 @@ function QueryField() {
             id="queryInput"
             type="queryInput"
             placeholder="Enter Query"
-            value={queryInput || ''}  //Unexpected token. Did you mean `{'}'}`
+            value={queryInput || ''}
             onChange={setQueryInput}>
         <option value="" selected="true" disabled="disabled" > Select GraphQL </option>
         <option value="%7Bcompanies%20%7B%20company_id%20name%20description%20%7D%7D"> Get Companies</option>
@@ -84,14 +84,14 @@ function QueryField() {
             className="input"
             id="queryOutput"
             type="queryOutput"
-            value={responseTime}
+            value={responseTime || 'Response Time'}
         ></input>
         <div>
           <button 
             className="submitButton"
             id='runquery'
             onClick={() => {sendQuery(queryInput) }} > Run Query </button>
-          <button className="submitButton" id='clearcache' onClick={()=> {clearCache(); setResponseTime('Response Time')} }>Clear Cache </button>
+          <button className="submitButton" id='clearcache' onClick={()=> {clearCache(); setResponseTime(0)} }>Clear Cache </button>
           <button className="submitButton" id='rest'> Reset </button>
         </div>
       </div>
@@ -109,7 +109,9 @@ function QueryField() {
       </div>
       <div id="speed">
         <div id="meter">
-          <Speedometer/>
+          <Speedometer
+            responseTime={responseTime}
+          />
           {/* <AccelDial id="dial3" value={this.state.agx} title="Acceleration X" /> */}
 
 

@@ -4,6 +4,7 @@ import QueryField from "../components/QueryField";
 import TeamContainer from './TeamContainer';
 import About from './About';
 import Tree from '../components/Tree';
+import Arrow from '../components/Arrow';
 
 
 
@@ -19,6 +20,7 @@ function MainContainer() {
       <div >
        
         <About />
+        <Arrow/>
         <Tree/>
         <QueryField className="queryField"/>
         <TeamContainer />

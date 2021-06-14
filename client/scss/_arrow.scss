@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+#app .arrow:first-child {
+  opacity: 0.4;
+}
+#app .arrow:nth-child(2) {
+  opacity: 0.7;
+}
+.arrow {
+  padding-top: 2px;
+}
+.arrow:before {
+  content: '';
+  width: 30px;
+  height: 10px;
+  background: #0d9fdf;
+  display: inline-block;
+  transform: skewY(45deg);
+}
+.arrow:after {
+  content: '';
+  width: 30px;
+  height: 10px;
+  background: #0d9fdf;
+  display: inline-block;
+  transform: skewY(-45deg);
+}
+.arrowSliding {
+  animation: slide 4s linear infinite;
+}
+.delay1 {
+  animation-delay: 0s;
+}
+.delay2 {
+  animation-delay: 1s;
+}
+.delay3 {
+  animation-delay: 2s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

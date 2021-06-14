@@ -1,11 +1,12 @@
-body {
-  font-family: sans-serif;
-  margin: 20px;
+.arrowButton {
+  border: 0;
+  background: white;
 }
-#app .arrow:first-child {
+
+#aniArrow .arrow:first-child {
   opacity: 0.4;
 }
-#app .arrow:nth-child(2) {
+#aniArrow .arrow:nth-child(2) {
   opacity: 0.7;
 }
 .arrow {

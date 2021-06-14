@@ -2,15 +2,48 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 
-.mate {
+.social {
   display: flex;
-  flex-direction: row;
-  height: 80%;
+  flex-direction: columns;
+
+  height: 70%;
   width: 25%;
   justify-content: center;
+}
+.member-cards {
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 150px;
+  }
+}
+.personal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: center;
+  img {
+    width: 150px;
+  }
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  a {
+    margin: 0;
+  }
+}
+#logo-main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#logo-main {
+  height: 60px;
+  margin: 0%;
 }
 
 // .social-container {
@@ -24,4 +57,3 @@
 // .team-social {
 
 // }
-

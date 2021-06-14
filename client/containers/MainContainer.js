@@ -19,7 +19,7 @@ function MainContainer() {
 
     return (
       <div>
-        <input type="submit" value="Arrow" onClick={onClick} />
+        <Arrow type="submit" value="Arrow" onClick={onClick} />
         { displayTree ? null :  <Tree /> }
       </div>
     )
@@ -28,16 +28,16 @@ function MainContainer() {
 
 // else as button for now, arrow later
   return (
-    <div className="main-container">
-      <div >
+    <div className="columnCenterContainer">
+     
        
         <About />
-        <Arrow/>
+        
         <ExpandTree />
         <QueryField className="queryField"/>
         <TeamContainer />
       </div>
-    </div>
+   
   );
 }
 

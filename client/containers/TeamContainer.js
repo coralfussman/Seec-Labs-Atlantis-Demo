@@ -5,12 +5,14 @@ import TeamSocials from '../components/TeamSocials'
 
 export default function TeamContainer() {
     return (
-        <div id="team-container">
-            <img src={page_brk} />
+        <>
+        <img src={page_brk} />
             <h2>Developers</h2>
+        <div id="team-container">
             <Team />
             <TeamSocials />
         </div>
+        </>
     )
 
 }

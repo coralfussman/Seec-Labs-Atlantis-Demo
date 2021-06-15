@@ -1,67 +1,84 @@
 import React from 'react';
 import GitHubLogo from '../assets/github.svg';
 import LinkedInLogo from '../assets/linkedin.svg';
+import Coral from '../assets/Coral_v.2.png';
+import Sett from '../assets/Sett_v.2.png';
+import Erik from '../assets/Erik_v.2.png';
+import Easy from '../assets/Erik_v.png';
 
 function Team(){
   return (
     <div id="team">
-     
-            <div className="mate">
-                <h3>Coral Fussman</h3>
-
-                    <div className="social-container">
-                        <a href="https://github.com/coralfussman"
-                            classNameName="github-social" target="_blank">
-                                <img id='logo-main' src={GitHubLogo} width="35"></img>
-                        </a>
-                        <a href="https://www.linkedin.com/in/coral-fussman-21721538/"
-                            classNameName="linkedin-social" target="_blank">
-                                <img id='logo-main' src={LinkedInLogo} width="35"></img>
-                        </a>
+      
+                    <div className="social">
+                    <div className="member-cards">
+                        <div className="personal">
+                        <h3>Coral Fussman</h3>
+                            <img src={Coral}/>
+                            <div className="links">
+                            <a href="https://github.com/coralfussman" >
+                                    <img id='logo-main' src={GitHubLogo} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/coral-fussman-21721538/">
+                                    <img id='logo-main' src={LinkedInLogo} />
+                            </a>
+                            </div>
+                        </div>
                     </div>
-            </div>
-            <div className="mate">
-                <h3>Sett Hein</h3>
+                </div>
 
-                    <div className="social-container">
-                        <a href="https://github.com/settnaing199"
-                            classNameName="github-social" target="_blank">
-                                <img id='logo-main' src={GitHubLogo} width="35"></img>
-                        </a>
-                        <a href="https://www.linkedin.com/in/sett-hein/"
-                            classNameName="linkedin-social" target="_blank">
-                                <img id='logo-main' src={LinkedInLogo} width="35"></img>
-                        </a>
+                <div className="social">
+                    <div className="member-cards">
+                        <div className="personal">
+                        <h3>Sett Hein</h3>
+                            <img src={Sett}/>
+                            <div className="links">
+                            <a href="https://github.com/settnaing199" >
+                                    <img id='logo-main' src={GitHubLogo} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/sett-hein/">
+                                    <img id='logo-main' src={LinkedInLogo} />
+                            </a>
+                            </div>
+                        </div>
                     </div>
-            </div>
-        <div className="mate">
-            <h3>Erik Matevosyan</h3>
-
-                <div className="social-container">
-                        <a href="https://github.com/erik-matevosyan"
-                            classNameName="github-social" target="_blank">
-                                <img id='logo-main' src={GitHubLogo} width="35"></img>
-                        </a>
-                        <a href="https://www.linkedin.com/in/erik-matevosyan/"
-                            classNameName="linkedin-social" target="_blank">
-                                <img id='logo-main' src={LinkedInLogo} width="35"></img>
-                        </a>
                 </div>
-        </div>
-        <div className="mate">
-            <h3>Erik J Rogel</h3>
 
-                <div className="social-container">
-                        <a href="https://github.com/erikjrogel"
-                            classNameName="github-social" target="_blank">
-                                <img id='logo-main' src={GitHubLogo} width="35"></img>
-                        </a>
-                        <a href="https://www.linkedin.com/in/erikjrogel/"
-                         classNameName="linkedin-social" target="_blank">
-                             <img id='logo-main' src={LinkedInLogo} width="35"></img>
-                        </a>
+                <div className="social">
+                    <div className="member-cards">
+                        <div className="personal">
+                        <h3>Erik Matevosyan</h3>
+                            <img src={Erik}/>
+                            <div className="links">
+                            <a href="https://github.com/erik-matevosyan" >
+                                    <img id='logo-main' src={GitHubLogo} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/erik-matevosyan/">
+                                    <img id='logo-main' src={LinkedInLogo} />
+                            </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-        </div>
+           
+
+                <div className="social">
+                    <div className="member-cards">
+                        <div className="personal">
+                        <h3>Erik Rogel</h3>
+                            <img src={Easy}/>
+                            <div className="links">
+                            <a href="https://github.com/erikjrogel" >
+                                    <img id='logo-main' src={GitHubLogo} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/erikjrogel/">
+                                    <img id='logo-main' src={LinkedInLogo} />
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
     
     </div>
   )

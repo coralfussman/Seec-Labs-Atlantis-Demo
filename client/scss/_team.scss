@@ -2,25 +2,50 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-
 }
 
-.mate {
+.social {
   display: flex;
   flex-direction: row;
   height: 80%;
   justify-content: center;
+  align-items: center;
 }
+.member-cards {
+  display: flex;
+  flex-direction: row;
+  // background: chartreuse;
+  // align-items: center;
+  
+  img {
+    width: 150px;
+  }
+}
+.personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-// .social-container {
+  img {
+    width: 150px;
+  }
+}
+.links {
+  display: flex;
+  // padding-left: 20px;
+  // flex-direction: column;
+  // background: chartreuse;
+  border: solid 1px black;
+  
+  a {
+    // margin-left: 10%;
+  }
+}
+#logo-main-container {
+  display: flex;
+  border: solid 1px orange;
 
-// }
-
-// .team-social-container {
-
-// }
-
-// .team-social {
-
-// }
-
+}
+#logo-main {
+  height: 60px;
+}

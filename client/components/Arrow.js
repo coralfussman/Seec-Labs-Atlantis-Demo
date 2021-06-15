@@ -1,17 +1,15 @@
-import React from 'react';
-import arrow from '../assets/arrow.png'
+import React from 'react'
 
-
-
-
-export default function Arrow() {
- 
-  return (
-    <div className="Arrow">
-            <a className="arrow">
-                <img id="arrow" src={arrow} width="35"></img>
-            </a>
-
-    </div>
-  );
+function Arrow(props) {
+    return (
+        <div id="aniArrow">
+        <button className="arrowButton" onClick={props.onClick}>
+            <div class="arrow arrowSliding delay1"></div>
+            <div class="arrow arrowSliding delay2"></div>
+            <div class="arrow arrowSliding delay3"></div>
+        </button>
+      </div>
+    )
 }
+
+export default Arrow

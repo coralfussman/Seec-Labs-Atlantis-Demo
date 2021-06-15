@@ -12,7 +12,7 @@ function App() {
         <TideHeader/>
         
       </div>
-      <div className="columnCenterContainer"><MainContainer/></div>
+     <MainContainer/>
     </div>
 
   );

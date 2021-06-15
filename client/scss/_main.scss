@@ -9,7 +9,7 @@
   overflow: auto;
   width: 85%;
   border-radius: 5%;
-  padding: 3%;
+  padding: 2%;
   box-shadow: -6px -2px 30px rgba(255, 255, 255, 0.15),
     -6px -2px 30px rgba(0, 0, 0, 0.15);
   border-radius: 30px 30px 30px 30px;
@@ -52,4 +52,12 @@
     -6px -2px 30px rgba(0, 0, 0, 0.15);
   border-radius: 30px 30px 30px 30px;
   font-size: 12px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

@@ -132,8 +132,7 @@ function mouseUp(event, node) {
 export default function App() {
   return (
     <div className="App">
-      <h1>Follow the Data</h1>
-      <h2>Flow of Request sent from Client to Server</h2>
+    
 
       <Tree
         data={data}
@@ -151,6 +150,8 @@ export default function App() {
           className: "custom"
         }}
       />
+      <h1>Follow the Data</h1>
+      <h2>Flow of Request sent from Client to Server</h2>
     </div>
   );
 }

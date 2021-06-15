@@ -4,10 +4,10 @@ div.custom-container {
 }
 
 svg.custom .node circle {
-  fill: #35c7cc;
-  stroke: #2593b8;
+  fill: $lightBlue;
+  stroke: #25b898;
+
   size: 10px;
-  stroke-width: 4px;
 }
 
 svg.custom .node text {
@@ -24,8 +24,8 @@ svg.custom .node {
 
 svg.custom path.link {
   fill: none;
-  stroke: #2593b8;
-  stroke-width: 2px;
+  stroke: $lightBlue;
+  stroke-width: 6px;
 }
 
 // #body {

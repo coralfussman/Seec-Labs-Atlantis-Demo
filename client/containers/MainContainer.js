@@ -4,7 +4,7 @@ import QueryField from "../components/QueryField";
 import TeamContainer from './TeamContainer';
 import About from './About';
 import Tree from '../components/Tree';
-import Arrow from '../components/Arrow'
+import Arrow from '../components/Arrow';
 
 
 
@@ -19,7 +19,7 @@ function MainContainer() {
 
     return (
       <div>
-        <input type="submit" value="Arrow" onClick={onClick} />
+        <Arrow type="submit" value="Arrow" onClick={onClick} />
         { displayTree ? null :  <Tree /> }
       </div>
     )
@@ -28,15 +28,16 @@ function MainContainer() {
 
 // else as button for now, arrow later
   return (
-    <div className="main-container">
-      <div >
+    <div className="columnCenterContainer">
+     
        
         <About />
+        
         <ExpandTree />
         <QueryField className="queryField"/>
         <TeamContainer />
       </div>
-    </div>
+   
   );
 }
 

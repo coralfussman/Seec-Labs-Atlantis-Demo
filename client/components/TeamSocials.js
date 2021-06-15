@@ -5,7 +5,7 @@ import NPMLogo from '../assets/npm_light.svg'
 
 export default function TeamSocials() {
     return (
-        <div class="team-social-container">
+        <div className="team-social-container">
           <h3>Socials</h3>
           <a href="https://github.com/oslabs-beta/Atlantis"
              className="team-social" target="_blank">

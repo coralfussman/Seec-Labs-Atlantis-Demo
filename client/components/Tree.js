@@ -131,13 +131,15 @@ function mouseUp(event, node) {
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="tree-div">
     
-
+      <h1>Follow the Data</h1>
+        <h2>Flow of Request sent from Client to Server</h2>
       <Tree
+        className="tree"
         data={data}
-        height={500}
-        width={1300}
+        height={200}
+        width={600}
         margins={{ top: 20, bottom: 10, left: 20, right: 200 }}
         gProps={{
           onClick: clickHandler,
@@ -147,11 +149,10 @@ export default function App() {
         }}
         animated
         svgProps={{
-          className: "custom"
+          className: "custom",
+          transform: 'rotate(90)'
         }}
       />
-      <h1>Follow the Data</h1>
-      <h2>Flow of Request sent from Client to Server</h2>
     </div>
   );
 }

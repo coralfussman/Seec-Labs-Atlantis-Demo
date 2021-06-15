@@ -17,10 +17,10 @@ function Team(){
                             <img src={Coral}/>
                             <div className="links">
                             <a href="https://github.com/coralfussman" >
-                                    <img id='logo-main' src={GitHubLogo} />
+                                    <img id='team-logo-icon' src={GitHubLogo} />
                             </a>
                             <a href="https://www.linkedin.com/in/coral-fussman-21721538/">
-                                    <img id='logo-main' src={LinkedInLogo} />
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
                             </a>
                             </div>
                         </div>
@@ -34,10 +34,10 @@ function Team(){
                             <img src={Sett}/>
                             <div className="links">
                             <a href="https://github.com/settnaing199" >
-                                    <img id='logo-main' src={GitHubLogo} />
+                                    <img id='team-logo-icon' src={GitHubLogo} />
                             </a>
                             <a href="https://www.linkedin.com/in/sett-hein/">
-                                    <img id='logo-main' src={LinkedInLogo} />
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
                             </a>
                             </div>
                         </div>
@@ -51,10 +51,10 @@ function Team(){
                             <img src={Erik}/>
                             <div className="links">
                             <a href="https://github.com/erik-matevosyan" >
-                                    <img id='logo-main' src={GitHubLogo} />
+                                    <img id='team-logo-icon' src={GitHubLogo} />
                             </a>
                             <a href="https://www.linkedin.com/in/erik-matevosyan/">
-                                    <img id='logo-main' src={LinkedInLogo} />
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
                             </a>
                             </div>
                         </div>
@@ -69,10 +69,10 @@ function Team(){
                             <img src={Easy}/>
                             <div className="links">
                             <a href="https://github.com/erikjrogel" >
-                                    <img id='logo-main' src={GitHubLogo} />
+                                    <img id='team-logo-icon' src={GitHubLogo} />
                             </a>
                             <a href="https://www.linkedin.com/in/erikjrogel/">
-                                    <img id='logo-main' src={LinkedInLogo} />
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
                             </a>
                             </div>
                         </div>

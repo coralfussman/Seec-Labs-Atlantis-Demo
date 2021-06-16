@@ -2,19 +2,24 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 80vw;
+  padding-bottom: 5%;
+
 }
 
 .social {
   display: flex;
-  flex-direction: columns;
-
-  height: 70%;
-  width: 25%;
+  flex-direction: row;
+  height: 80%;
   justify-content: center;
+  align-items: center;
+  flex: 0 0 25%;  
+
 }
 .member-cards {
   display: flex;
   flex-direction: row;
+  
   img {
     width: 150px;
   }
@@ -22,38 +27,52 @@
 .personal {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  justify-content: center;
+  align-items: center;
+
   img {
     width: 150px;
   }
 }
 .links {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+
   a {
     margin: 0;
   }
 }
+#team-logo-icon{
+  display: flex;
+  margin: 5px;
+  height: 60px;
+  width: 60px;
+
+}
 #logo-main-container {
   display: flex;
   justify-content: center;
-}
 
+}
 #logo-main {
   height: 60px;
-  margin: 0%;
+  margin-left: 35px;
+
 }
+.team-social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  padding-bottom: 5%;
 
-// .social-container {
+}
+.team-social-icons{
+  display: flex;
+  justify-content: center;
 
-// }
+}
+.team-social {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
 
-// .team-social-container {
-
-// }
-
-// .team-social {
-
-// }
+}

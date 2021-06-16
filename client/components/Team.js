@@ -10,39 +10,39 @@ function Team(){
   return (
     <div id="team">
       
-
                     <div className="social">
+                    <div className="member-cards">
                         <div className="personal">
                         <h3>Coral Fussman</h3>
                             <img src={Coral}/>
-                            <a href="https://github.com/coralfussman" target="_blank">
-                                    <img id='logo-main' src={GitHubLogo} />
+                            <div className="links">
+                            <a href="https://github.com/coralfussman" >
+                                    <img id='team-logo-icon' src={GitHubLogo} />
                             </a>
-                        </div>
-                        <div className="links">
-                            <a href="https://www.linkedin.com/in/coral-fussman-21721538/" target="_blank">
-                                    <img id='logo-main' src={LinkedInLogo} />
+                            <a href="https://www.linkedin.com/in/coral-fussman-21721538/">
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
                             </a>
+                            </div>
                         </div>
                     </div>
-            
-            
+                </div>
 
-                    <div className="social">
+                <div className="social">
+                    <div className="member-cards">
                         <div className="personal">
                         <h3>Sett Hein</h3>
-                        <img src={Sett}/>
-                        <div className="links">
-                        <a href="https://github.com/settnaing199" >
-                                <img id='logo-main' src={GitHubLogo} />
-                        </a>
-                        </div>
-                        <a href="https://www.linkedin.com/in/sett-hein/" >
-                                <img id='logo-main' src={LinkedInLogo} />
-                        </a>
+                            <img src={Sett}/>
+                            <div className="links">
+                            <a href="https://github.com/settnaing199" >
+                                    <img id='team-logo-icon' src={GitHubLogo} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/sett-hein/">
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
+                            </a>
+                            </div>
                         </div>
                     </div>
-           
+                </div>
 
                 <div className="social">
                     <div className="member-cards">
@@ -51,30 +51,31 @@ function Team(){
                             <img src={Erik}/>
                             <div className="links">
                             <a href="https://github.com/erik-matevosyan" >
-                                    <img id='logo-main' src={GitHubLogo} />
+                                    <img id='team-logo-icon' src={GitHubLogo} />
                             </a>
                             <a href="https://www.linkedin.com/in/erik-matevosyan/">
-                                    <img id='logo-main' src={LinkedInLogo} />
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
                             </a>
                             </div>
                         </div>
                     </div>
                 </div>
-      
-        
+           
 
                 <div className="social">
-                    <div className="personal">
-                    <h3>Erik J Rogel</h3>
-                    <img src={Easy}/>
-                        <a href="https://github.com/erikjrogel" target="_blank">
-                                <img id='logo-main' src={GitHubLogo} ></img>
-                        </a>
+                    <div className="member-cards">
+                        <div className="personal">
+                        <h3>Erik Rogel</h3>
+                            <img src={Easy}/>
+                            <div className="links">
+                            <a href="https://github.com/erikjrogel" >
+                                    <img id='team-logo-icon' src={GitHubLogo} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/erikjrogel/">
+                                    <img id='team-logo-icon' src={LinkedInLogo} />
+                            </a>
+                            </div>
                         </div>
-                        <div className="links">
-                        <a href="https://www.linkedin.com/in/erikjrogel/"target="_blank">
-                             <img id='logo-main' src={LinkedInLogo} ></img>
-                        </a>
                     </div>
                 </div>
        

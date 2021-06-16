@@ -1,6 +1,16 @@
+#aniArrow{
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  // width: 30px;
+  border: springgreen solid 2px;
+}
 .arrowButton {
-  border: 0;
+  border: orange solid 1px;
+  align-items: center;
   background: white;
+  // width: 30px;
+
 }
 
 #aniArrow .arrow:first-child {

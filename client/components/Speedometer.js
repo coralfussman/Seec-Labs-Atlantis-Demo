@@ -1,6 +1,6 @@
 import React from 'react'
 import { RadialGauge } from "react-canvas-gauges";
-
+import Dial from './Dial.js'
 function Speedometer({ responseTime, setResponseTime }) {
 
 

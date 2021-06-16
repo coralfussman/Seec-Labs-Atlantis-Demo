@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import MinusDark from '../assets/minus_dark.svg'
+import MinusHover from '../assets/minus_light.svg'
 // import images
-import Minus from '../assets/minus_light.svg';
-// import MinusHover from '..assets/minus-button-hover.svg';
+// import MinusHover fro
 
 /* 
   component that renders each string-type field in our query
@@ -11,7 +12,7 @@ const TypeField = (props) => {
   const { item, deleteItem, subQuery } = props;
 
   // Below is so that we don't render the minus button for the id field
-  const [itemIsId, setItemIsId] = useState(false);
+  const [itemIsId, setItemIsId] =useState(false);
   useEffect(() => {
     if (item === 'id') setItemIsId(true);
   }, [itemIsId]);
@@ -37,8 +38,8 @@ const TypeField = (props) => {
         {!itemIsId && (
           <button className="minus-button" onClick={() => deleteItem(item)}>
             <div className="plus-minus-icons">
-              <img src={Minus} />
-              {/* <img src={MinusHover} className="hover-button" /> */}
+              <img src={MinusDark} />
+              <img src={MinusHover} className="hover-button" />
             </div>
           </button>
         )}

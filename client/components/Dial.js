@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { arc } from "d3-shape";
 import { scaleLinear } from "d3-scale";
 import { format } from "d3-format";
@@ -13,11 +13,9 @@ const Dial = ({
   units = timeMillisecond,
   responseTime,
   setPercent
-  // props
 }) => {
-     
-
-  const newVal = setPercent(value)
+  console.log(value, 'here is value in dial');
+ 
   const backgroundArc = arc()
     .innerRadius(0.65)
     .outerRadius(1)
@@ -49,9 +47,7 @@ const Dial = ({
   const gradientSteps = colorScale.ticks(10).map((value) => colorScale(value));
 
   const markerLocation = getCoordsOnArc(angle, 1 - (1 - 0.65) / 2);
-  console.log(markerLocation);
-
-  
+ 
 
   return (
     <div

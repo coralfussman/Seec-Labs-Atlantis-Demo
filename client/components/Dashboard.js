@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Speedometer from "./Speedometer.js"
 import persisted from "../assets/persisted.svg"
 import fast from "../assets/fast.svg"
+import QueryState from "./QueryState.js"
 // input field that lets us query the route cache test.
 
 
@@ -9,7 +10,7 @@ import fast from "../assets/fast.svg"
 let start = 0;
 let end = 0;
 let dif = 0;
-
+/////---------------------------Custom state hook---------------------------------/////
 
 const useInput = (init) => {
   const [value, setValue] = useState(init);
@@ -21,8 +22,8 @@ const useInput = (init) => {
   // return the value with the onChange function instead of setValue function
   return [value, onChange];
 };
-
-function QueryField() {
+/////---------------------------They're component starts here---------------------------------/////
+function Dashboard() {
   // const [query, setQuery] = useState(() => {});
   const [queryInput, setQueryInput] = useInput();
   const [responseTime, setResponseTime] = useState(0);
@@ -48,38 +49,21 @@ function QueryField() {
       fetch('/clearcache/');
   }
 
-  const queryField = (
 
-    <div className="field">
+  return (
+    <>
+      <h2>Demo & Metrics</h2>
+    <div className="queryField">
+      <div id="field">
+      <h4>Make a Request to Cache your speed Gains</h4>
+      <div id="window">
+      <QueryState queryInput={queryInput} setQueryInput={setQueryInput}/>
+      </div>
       <p>Atlantis Query</p>
 
-      <div className="centerRow">
-   
-      
-    </div>
-      <div>
-      <select 
-            className="input"
-            id="queryInput"
-            type="queryInput"
-            placeholder="Enter Query"
-            value={queryInput || ''}
-            onChange={setQueryInput}>
-        <option value="" selected="true" disabled="disabled" > Select GraphQL </option>
-        <option value="%7Bcompanies%20%7B%20company_id%20name%20description%20%7D%7D"> Get Companies</option>
-        <option value="%7Busers%20(company_id:4)%20%7B%20user_id%20name%20company_id%20%7D%7D"> Get Employee at Amazon</option>
-        <option value="%7Bcompanies%20%7B%20company_id%20name%20description%20employees%7B%20name%20%7D%20%7D%7D"> Get Company Employees</option>
 
-
-      </select>
-        {/* <input
-       
-            id="queryInput"
-            type="queryInput"
-            placeholder="Enter Query"
-            value={queryInput}
-            onChange={setQueryInput}
-        ></input> */}
+       {/* ============___________Query Buttons___________============*/}
+      <div className="buttonDash">
         <input
             className="input"
             id="queryOutput"
@@ -95,17 +79,8 @@ function QueryField() {
           <button className="submitButton" id='rest'> Reset </button>
         </div>
       </div>
-    </div>
-  );
 
-  return (
-    <>
-      <h2>Demo & Metrics</h2>
-    <div className="queryField">
-      <div id="field">
-      <h4>Make a Request to Cache your speed Gains</h4>
-      <div id="window"></div>
-        {queryField}
+     {/* ============___________Metrics Dash___________============*/}
       </div>
       <div id="speed">
         <div id="meter">
@@ -140,6 +115,6 @@ function QueryField() {
   );
 }
 
-export default QueryField;
+export default Dashboard;
 
 

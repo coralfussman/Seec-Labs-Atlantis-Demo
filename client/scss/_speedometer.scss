@@ -39,7 +39,7 @@ canvas {
   box-shadow: -6px -2px 30px rgba(255, 255, 255, 0.15),
     -6px -2px 30px rgba(0, 0, 0, 0.15);
   border-radius: 5%;
-  padding: 0;
+  padding: 5%;
 }
 
 .metricDash {
@@ -76,7 +76,7 @@ canvas {
   width: 50%;
   padding-left: 0;
 }
-.style{
+.style {
   animation: true;
   animation-duration: 1000ms;
 }

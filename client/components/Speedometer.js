@@ -1,6 +1,6 @@
 import React from 'react'
 import { RadialGauge } from "react-canvas-gauges";
-import Dial from './Dial.js'
+
 function Speedometer({ responseTime, setResponseTime }) {
 
 
@@ -14,10 +14,6 @@ function Speedometer({ responseTime, setResponseTime }) {
                     value={0 || responseTime}
                     minValue={0}
                     maxValue={100}
-                    // animationTarget="needle"
-                    // data-animation="true"
-                    // data-animation-rule="bounce"
-                    // data-animation-duration={3000}
                     majorTicks={[
                     "1200",
                     "1100",
@@ -40,12 +36,6 @@ function Speedometer({ responseTime, setResponseTime }) {
                     ]'
                 />
                 <canvas data-type="radial-gauge"
-                    // animation="true"
-                    // animationDuration={1000}
-                    // animationRule="bounce"
-                    data-animation="true"
-                    data-animation-rule="bounce"
-                    data-animation-duration={3000}
                     data-highlights='[
                     { "from": 50, "to": 100, "color": "rgb(111, 235, 111,.25)" },
                     { "from": 100, "to": 150, "color": "rgb(76, 219, 76,.25)" },

@@ -28,13 +28,17 @@ function Dashboard() {
   const [queryInput, setQueryInput] = useInput();
   const [responseTime, setResponseTime] = useState(0);
   
+let value;
 
-  function setPercent (value) {
-    if(responseTime > 30){
-      return value = 99.5
-    } else {
-      return 0
+  function setPercent (val) {
+    if(value === 1) {
+      if(responseTime > 30){
+        console.log(value, 'value is here');
+        return value = 99.5
+      }
     }
+    value++;
+    return 0
   }
   
   function sendQuery(queryInput) {
@@ -114,7 +118,7 @@ function Dashboard() {
             </div>
             <div id="metric">
               <h2>0-100%  </h2>
-              <Dial responseTime={responseTime} setPercent={setPercent} />
+              <Dial value={value} responseTime={responseTime} setPercent={setPercent} />
               
             </div>
         </div>

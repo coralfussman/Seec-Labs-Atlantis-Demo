@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import QueryWindow from '../components/QueryWindow.js';
-import DropdownItem from '../components/DropdownItem.js';
+import QueryWindow from './QueryWindow.js';
+import DropdownItem from './DropdownItem.js';
 import { ResultsHelper } from '../helpers/HelperFunctions.js';
 import DropDown from '../assets/drop_dark.svg';
 import DropDownHover from '../assets/drop_light.svg';

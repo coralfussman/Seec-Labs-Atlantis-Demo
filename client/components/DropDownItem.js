@@ -5,8 +5,8 @@ import React from 'react';
 */
 
 const DropdownItem = (props) => {
+  console.log("hitting a dropdown item!");
   const { func, item } = props;
-
   return (
     <>
       <div className="dropdown-items" onClick={() => func(item)}>

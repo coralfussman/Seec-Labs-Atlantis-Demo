@@ -5,7 +5,6 @@ import UsersFields from './UsersFields';
 import Plus from '../assets/plus_light.svg';
 import PlusHover from '../assets/plus_dark.svg';
 const QueryWindow = (props) => {
-
     const { type, outputFunction } = props; // import props
 
     const [queryList, setQueryList] = useState(['id']);
@@ -76,7 +75,7 @@ const QueryWindow = (props) => {
     // ______________________Buttons Functionality_____________________ //
     // ________________________________________________________________ //
 
-    //________________ Minus button ________________//
+
     function deleteItem(item) {
         // Remove item from queryList
         const newList = [...queryList];

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import QueryWindow from '../components/QueryWindow.js';
-import DropdownItem from '../components/DropdownItem.js';
+import QueryWindow from './QueryWindow.js';
+import DropdownItem from './DropdownItem.js';
 import { ResultsHelper } from '../helpers/HelperFunctions.js';
 import DropDown from '../assets/drop_dark.svg';
 import DropDownHover from '../assets/drop_light.svg';
@@ -14,6 +14,7 @@ import DropDownHover from '../assets/drop_light.svg';
 */
 
 const Query = (props) => {
+  console.log("Query State hit!")
   
   const { queryInput, setQueryInput } = props;
 
@@ -58,6 +59,7 @@ const Query = (props) => {
     It makes a change to the state in the parent component, Demo
   */
   const outputFunction = (newList, sub, query, id) => {
+    console.log(query, 'here is query!');
     const newOutput = ResultsHelper(newList, sub, query, id, queryInput);
     setQueryInput(newOutput);
   };

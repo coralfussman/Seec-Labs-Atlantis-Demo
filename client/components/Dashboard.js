@@ -3,6 +3,7 @@ import Speedometer from "./Speedometer.js"
 import persisted from "../assets/persisted.svg"
 import fast from "../assets/fast.svg"
 import QueryState from "./QueryState.js"
+import Dial from './Dial.js'
 // input field that lets us query the route cache test.
 
 
@@ -10,27 +11,38 @@ import QueryState from "./QueryState.js"
 let start = 0;
 let end = 0;
 let dif = 0;
-/////---------------------------Custom state hook---------------------------------/////
+/////--------------------------- Custom state hook ---------------------------------/////
 
 const useInput = (init) => {
   const [value, setValue] = useState(init);
   const onChange = (e) => {
-    e.persist()
-    
-    setValue(e.target.value);
+       //setValue(state => ({ ...state, [type]: value }))
+     setValue(e.target.value);
   };
   // return the value with the onChange function instead of setValue function
   return [value, onChange];
 };
-/////---------------------------They're component starts here---------------------------------/////
+/////---------------------------Component starts here---------------------------------/////
 function Dashboard() {
   // const [query, setQuery] = useState(() => {});
   const [queryInput, setQueryInput] = useInput();
   const [responseTime, setResponseTime] = useState(0);
   
+let value;
+
+  function setPercent (val) {
+    if(value === 1) {
+      if(responseTime > 30){
+        console.log(value, 'value is here');
+        return value = 99.5
+      }
+    }
+    value++;
+    return 0
+  }
   
   function sendQuery(queryInput) {
-      console.log('recieved this', queryInput)
+      console.log('received this', responseTime)
       // start a timer
       start = performance.now()
       fetch(`/cachetest/${queryInput}`)
@@ -47,7 +59,9 @@ function Dashboard() {
 
   function clearCache() {
       fetch('/clearcache/');
+      
   }
+
 
 
   return (
@@ -104,8 +118,8 @@ function Dashboard() {
             </div>
             <div id="metric">
               <h2>0-100%  </h2>
-              <img className="metric-logo" src={persisted} alt="persist"/>
-              <h5>cache hit  </h5>
+              <Dial value={value} responseTime={responseTime} setPercent={setPercent} />
+              
             </div>
         </div>
       </div>

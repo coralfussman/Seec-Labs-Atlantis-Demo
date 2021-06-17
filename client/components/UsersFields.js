@@ -12,6 +12,7 @@ import Plus from '../assets/plus_light.svg';
 */
 
 const UsersFields = (props) => {
+  console.log("UsersFields");
   const { usersFields, type, outputFunction, modifyUsersFields } = props; // import props
 
   const [queryList, setQueryList] = useState(usersFields);
@@ -49,15 +50,16 @@ const UsersFields = (props) => {
     setAvailableList(convertIntoList(userFields));
   }, []);
 
-  const userFields = [
-    { country_id: 'string' },
+  const userType = [
+    { user_id: 'string' },
     // { id: "string" }, // commented out because we're making it an immutable field
     { name: 'string' },
-    { population: 'string' },
+   
   ];
 
   // Takes the items list and returns something like: [ id, name, capital, cities ]
   const convertIntoList = (itemList) => {
+    
     const output = itemList.map((obj) => Object.keys(obj)[0]);
     return output;
   };
@@ -69,6 +71,7 @@ const UsersFields = (props) => {
   //======= Minus button ========//
   function deleteItem(item) {
     // execute a function back in query fields to update list, which in turn will update this component
+    console.log("DELTE");
     modifyUsersFields(item, 'delete');
 
     // remove item from queryList
@@ -86,6 +89,7 @@ const UsersFields = (props) => {
 
   //======= Plus button ========//
   function addItem(item) {
+    console.log("ADD ITEM HIT!")
     modifyUsersFields(item, 'add');
 
     // add item to queryList
@@ -101,6 +105,7 @@ const UsersFields = (props) => {
     togglePlusDropdown(false);
     // call a function that prepares the query for actually being sent
     outputFunction(0, newList, 0);
+    console.log("ADD ITEM exist!")
   }
 
   // Fires when you click plus -- only show plus dropdown if there's something in the list
